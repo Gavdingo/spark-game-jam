@@ -1,1 +1,5 @@
+res://Menu.tres
+res://Menu.tscn
+res://fonts/Menu.tres
 res://game.tscn
+res://scripts/menu.gd
