@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://chrvf3j8t7drl"]
+[gd_scene load_steps=4 format=3 uid="uid://d1y5trcqdsxl7"]
 
 [ext_resource type="Texture2D" uid="uid://ca74u1mja21kc" path="res://assets/zeo254-completed-commission.png" id="1_a0we4"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fdj8c"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4rtsy"]
 texture = ExtResource("1_a0we4")
 3:0/0 = 0
 5:0/0 = 0
@@ -57,7 +57,7 @@ texture = ExtResource("1_a0we4")
 
 [sub_resource type="TileSet" id="TileSet_cgeix"]
 physics_layer_0/collision_layer = 1
-sources/2 = SubResource("TileSetAtlasSource_fdj8c")
+sources/2 = SubResource("TileSetAtlasSource_4rtsy")
 
 [node name="Game" type="Node2D"]
 

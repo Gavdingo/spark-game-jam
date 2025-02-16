@@ -5,6 +5,8 @@ extends Node2D
 
 @export var spawn_interval: float = 1.0
 
+@onready var player = $Player
+
 func _ready() -> void:
 	randomize()
 	var timer = Timer.new()
