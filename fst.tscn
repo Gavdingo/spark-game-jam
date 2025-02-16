@@ -57,7 +57,7 @@ offset_left = -48.0
 offset_top = -136.2
 offset_right = 52.0
 offset_bottom = -96.2
-value = 60.0
+value = 100.0
 texture_progress = SubResource("GradientTexture1D_5aghv")
 
 [node name="Score" parent="Player" instance=ExtResource("5_qowyu")]
