@@ -1,19 +1,45 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0bktl38jku2j"]
+[gd_scene load_steps=5 format=3 uid="uid://bfe2xfhul5m7d"]
 
-[ext_resource type="Script" path="res://carrot.gd" id="1_v7jk2"]
+[ext_resource type="Script" path="res://carrot.gd" id="1_ukm8r"]
+[ext_resource type="Texture2D" uid="uid://djcpni0icc88m" path="res://carrot.png" id="2_jxpg3"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_a68c7"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_3dgjv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jxpg3")
+}],
+"loop": true,
+"name": &"carrots",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"no carrot",
+"speed": 5.0
+}]
 
-[sub_resource type="Gradient" id="Gradient_u8s32"]
-colors = PackedColorArray(0, 1, 0, 1, 1, 1, 0, 1)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4b2gd"]
+size = Vector2(70, 166)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_rl72n"]
-gradient = SubResource("Gradient_u8s32")
+[node name="carrot" type="Node2D"]
+light_mask = 4
+visibility_layer = 2
+position = Vector2(195, 227)
+script = ExtResource("1_ukm8r")
 
-[node name="StaticBody2D" type="StaticBody2D"]
-scale = Vector2(50, 50)
-script = ExtResource("1_v7jk2")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3dgjv")
+animation = &"carrots"
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-mesh = SubResource("QuadMesh_a68c7")
-texture = SubResource("GradientTexture1D_rl72n")
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-4, -8)
+shape = SubResource("RectangleShape2D_4b2gd")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

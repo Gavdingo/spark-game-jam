@@ -1,13 +1,24 @@
-extends StaticBody2D
+extends Node2D
 
-var other_node: Node2D
+var state="no carrot"
+var player_in_area = false
 
-func _ready() -> void:
-	other_node = get_node("/root/Node2D/Player")
+#func _ready():
+	#if state=="no apples"
+	
 
-func _process(delta: float) -> void:
-	var distance = global_position.distance_to(other_node.global_position)
+func _process(delta):
+	if state=="no carrot":
+		$AnimatedSprite2D.play('no carrot')
+	if state=="carrots":
+		$AnimatedSprite2D.play("carrots")
+		if player_in_area:
+			state='no carrot'
 
-	if distance < 50:
-		get_node("/root/Node2D/Player/Score/Label").score += 1
-		queue_free()
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.has_method('player'):
+		player_in_area=true
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.has_method('player'):
+		player_in_area=false
