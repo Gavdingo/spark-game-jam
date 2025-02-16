@@ -32,6 +32,7 @@ texture = ExtResource("1_a0we4")
 0:0/size_in_atlas = Vector2i(3, 4)
 0:0/0 = 0
 0:0/0/z_index = 2
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.0625, 13.75, 7.4375, 13.75, 9.4375, 28.125, -10.1875, 27.375)
 0:4/0 = 0
 1:4/0 = 0
 2:4/0 = 0
@@ -55,11 +56,13 @@ texture = ExtResource("1_a0we4")
 3:7/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_cgeix"]
+physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_fdj8c")
 
 [node name="Game" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(0.965, 0.965)
 tile_set = SubResource("TileSet_cgeix")
 format = 2
 layer_0/name = "Ground"
