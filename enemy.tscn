@@ -34,8 +34,6 @@ animations = [{
 }]
 
 [node name="Enemy" type="CharacterBody2D"]
-z_index = 1
-y_sort_enabled = true
 collision_mask = 2
 script = ExtResource("1_8mvsr")
 
