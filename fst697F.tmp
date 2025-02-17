@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dldl6cagce3tb"]
+[gd_scene load_steps=21 format=3 uid="uid://dldl6cagce3tb"]
 
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_4ltvb"]
 [ext_resource type="Script" path="res://fst.gd" id="1_gxw50"]
@@ -8,16 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://fil4h6w6ng4g" path="res://score.tscn" id="5_qowyu"]
 [ext_resource type="Texture2D" uid="uid://b32jjs3v2usxi" path="res://down2.png" id="6_xoq5v"]
 [ext_resource type="Texture2D" uid="uid://ca74u1mja21kc" path="res://assets/zeo254-completed-commission.png" id="7_cusfl"]
-[ext_resource type="Texture2D" uid="uid://sdmokwrpp1e7" path="res://happy1.png" id="7_iqgc6"]
 [ext_resource type="Texture2D" uid="uid://c35hvvuigkr8" path="res://left1.png" id="7_juaa7"]
-[ext_resource type="Texture2D" uid="uid://b4bueqovorgqy" path="res://happy2.png" id="8_lqn7v"]
 [ext_resource type="Texture2D" uid="uid://bd8gvkty0tgtt" path="res://left2.png" id="8_t5hch"]
 [ext_resource type="Texture2D" uid="uid://hjmwo8ulrhb5" path="res://right1.png" id="9_nj6s4"]
 [ext_resource type="Texture2D" uid="uid://bn6p5gh2ullgw" path="res://right2.png" id="10_c0ba7"]
 [ext_resource type="Texture2D" uid="uid://cgshn6uunh18s" path="res://up1.png" id="11_evhp2"]
 [ext_resource type="Texture2D" uid="uid://3027nx1fjjat" path="res://up2.png" id="12_54333"]
-[ext_resource type="Texture2D" uid="uid://c8d6seps56f6f" path="res://cry1.png" id="13_gpp33"]
-[ext_resource type="Texture2D" uid="uid://b175jw0pyktab" path="res://cry2.png" id="14_sob4c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_msyr6"]
 
@@ -32,17 +28,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"down",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_iqgc6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_lqn7v")
-}],
-"loop": true,
-"name": &"happy",
 "speed": 5.0
 }, {
 "frames": [{
@@ -65,17 +50,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"right",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("13_gpp33")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_sob4c")
-}],
-"loop": true,
-"name": &"sad",
 "speed": 5.0
 }, {
 "frames": [{
@@ -164,18 +138,17 @@ collision_layer = 2
 script = ExtResource("1_4ltvb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-scale = Vector2(1.76, 1.76)
+scale = Vector2(6.585, 6.585)
 shape = SubResource("RectangleShape2D_msyr6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_jlvkr")
-animation = &"happy"
+animation = &"down"
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
 [node name="Node2D" type="Node2D" parent="Player"]
-position = Vector2(0, 713.98)
+position = Vector2(0, 750)
 scale = Vector2(1, 5)
 
 [node name="HealthBar" type="TextureProgressBar" parent="Player/Node2D"]
@@ -191,7 +164,6 @@ offset_left = -550.0
 offset_top = -300.0
 offset_right = -550.0
 offset_bottom = -300.0
-scale = Vector2(2.025, 2.025)
 
 [node name="TileMap2" type="TileMap" parent="."]
 z_index = -4096

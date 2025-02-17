@@ -10,5 +10,15 @@ func _physics_process(delta: float) -> void:
 	var player_node = get_node("../Player")
 	var player_position = player_node.position
 	
-	position = position.move_toward(player_position, SPEED * delta)
-	#move_and_collide(player_position)
+	# Calculate direction vector
+	var direction = (player_position - position).normalized()
+	
+	# Move using the direction vector
+	position += direction * SPEED * delta
+
+	if direction.x > 0:
+		# Play right animation
+		$AnimatedSprite2D.play("right")
+	else:
+		# Play left animation
+		$AnimatedSprite2D.play("left")
