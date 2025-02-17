@@ -26,7 +26,11 @@ func _physics_process(delta: float) -> void:
 	
 	var collision_count = get_slide_collision_count()
 	for i in range(collision_count):
-		health -= 0.2
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+
+		if collider.scene_file_path.contains("enemy"):
+			health -= 0.2
 		
 	var health_bar = get_node("Node2D/HealthBar")
 	health_bar.value = health
