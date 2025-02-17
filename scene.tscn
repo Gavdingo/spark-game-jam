@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dege7rsy1ygui"]
+
+[ext_resource type="Texture2D" uid="uid://2wwh6kk30d0h" path="res://grass.jpeg" id="1_1xobm"]
+[ext_resource type="PackedScene" uid="uid://ddkanldw6kbj2" path="res://player.tscn" id="2_qcasq"]
+[ext_resource type="PackedScene" uid="uid://bfe2xfhul5m7d" path="res://carrot.tscn" id="3_mxp7o"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1xobm")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_qcasq")]
+
+[node name="carrot" parent="." instance=ExtResource("3_mxp7o")]
+position = Vector2(858, 318)
