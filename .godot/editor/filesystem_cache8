@@ -1,49 +1,31 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739815854
-animations.tscn::PackedScene::8121136444621561836::1739750811::0::1::::<><>::uid://2wwh6kk30d0h::::res://grass.jpeg<>res://bunny script.gd<>uid://c8d6seps56f6f::::res://cry1.png<>uid://b175jw0pyktab::::res://cry2.png<>uid://c7avi2w75tikk::::res://down1.png<>uid://b32jjs3v2usxi::::res://down2.png<>uid://sdmokwrpp1e7::::res://happy1.png<>uid://b4bueqovorgqy::::res://happy2.png<>uid://c35hvvuigkr8::::res://left1.png<>uid://bd8gvkty0tgtt::::res://left2.png<>uid://hjmwo8ulrhb5::::res://right1.png<>uid://bn6p5gh2ullgw::::res://right2.png<>uid://cgshn6uunh18s::::res://up1.png<>uid://3027nx1fjjat::::res://up2.png<>uid://bvklv4ryhbkhg::::res://wolfleft1.png<>uid://1q5nplk0idbc::::res://wolfleft2.png<>uid://vfhv5j63uap6::::res://wolfright1.png<>uid://duim1i16s1nw4::::res://wolfright2.png
-bunny animation.tscn::PackedScene::2098860689905552883::1739750811::0::1::::<><>::uid://hjmwo8ulrhb5::::res://right1.png<>uid://2wwh6kk30d0h::::res://grass.jpeg<>res://bunny script.gd<>uid://c8d6seps56f6f::::res://cry1.png<>uid://bn6p5gh2ullgw::::res://right2.png<>uid://c7avi2w75tikk::::res://down1.png<>uid://c35hvvuigkr8::::res://left1.png<>uid://b175jw0pyktab::::res://cry2.png<>uid://bd8gvkty0tgtt::::res://left2.png<>uid://b32jjs3v2usxi::::res://down2.png<>uid://sdmokwrpp1e7::::res://happy1.png<>uid://b4bueqovorgqy::::res://happy2.png<>uid://cgshn6uunh18s::::res://up1.png<>uid://3027nx1fjjat::::res://up2.png<>uid://bvklv4ryhbkhg::::res://wolfleft1.png<>uid://1q5nplk0idbc::::res://wolfleft2.png<>uid://vfhv5j63uap6::::res://wolfright1.png<>uid://duim1i16s1nw4::::res://wolfright2.png
-bunny script.gd::GDScript::-1::1739750811::0::1::::<>CharacterBody2D<>::
-carrot.gd::GDScript::-1::1739753626::0::1::::<>StaticBody2D<>::
-carrot.png::CompressedTexture2D::7796024828715160290::1739750811::1739753726::1::::<><>::
-carrot.tscn::PackedScene::6530268558626117487::1739753626::0::1::::<><>::res://carrot.gd<>uid://djcpni0icc88m::::res://carrot.png
-character_body_2d.gd::GDScript::-1::1739753626::0::1::::<>CharacterBody2D<>::
-character_body_2d_2.gd::GDScript::-1::1739750811::0::1::::<>CharacterBody2D<>::
-cry1.png::CompressedTexture2D::7097180945894118415::1739750811::1739753726::1::::<><>::
-cry2.png::CompressedTexture2D::4279229483187825853::1739750811::1739753726::1::::<><>::
+::res://::1739821475
 d6a34dc9ea4d79b19c7fa17465b6540f.jpeg::CompressedTexture2D::3053479282141796643::1739750811::1739753726::1::::<><>::
-down1.png::CompressedTexture2D::7020175160613504374::1739750811::1739753726::1::::<><>::
-down2.png::CompressedTexture2D::4408010019663522894::1739750811::1739753726::1::::<><>::
-enemy.gd::GDScript::-1::1739763113::0::1::::<>CharacterBody2D<>::
-enemy.tscn::PackedScene::3283499467380858608::1739763113::0::1::::<><>::res://enemy.gd<>uid://bvklv4ryhbkhg::::res://wolfleft1.png<>uid://1q5nplk0idbc::::res://wolfleft2.png<>uid://vfhv5j63uap6::::res://wolfright1.png<>uid://duim1i16s1nw4::::res://wolfright2.png
 export_presets.cfg::TextFile::-1::1739750811::0::1::::<><>::
-fst.gd::GDScript::-1::1739750811::0::1::::<>Node2D<>::
-fst.tscn::PackedScene::7938255816213497335::1739763113::0::1::::<><>::res://character_body_2d.gd<>res://fst.gd<>uid://c0bktl38jku2j::::res://carrot.tscn<>uid://bm1s0yrtrikvo::::res://enemy.tscn<>uid://c7avi2w75tikk::::res://down1.png<>uid://fil4h6w6ng4g::::res://score.tscn<>uid://b32jjs3v2usxi::::res://down2.png<>uid://ca74u1mja21kc::::res://assets/zeo254-completed-commission.png<>uid://sdmokwrpp1e7::::res://happy1.png<>uid://c35hvvuigkr8::::res://left1.png<>uid://b4bueqovorgqy::::res://happy2.png<>uid://bd8gvkty0tgtt::::res://left2.png<>uid://hjmwo8ulrhb5::::res://right1.png<>uid://bn6p5gh2ullgw::::res://right2.png<>uid://cgshn6uunh18s::::res://up1.png<>uid://3027nx1fjjat::::res://up2.png<>uid://c8d6seps56f6f::::res://cry1.png<>uid://b175jw0pyktab::::res://cry2.png
-game.tscn::PackedScene::9035573388351038258::1739763113::0::1::::<><>::uid://ca74u1mja21kc::::res://assets/zeo254-completed-commission.png
-grass.jpeg::CompressedTexture2D::1941865007379043117::1739750811::1739753727::1::::<><>::
-happy1.png::CompressedTexture2D::1270346483786893976::1739750811::1739753726::1::::<><>::
-happy2.png::CompressedTexture2D::4425183872955441240::1739750811::1739753726::1::::<><>::
-icon.svg::CompressedTexture2D::1480724717128621171::1739747740::1739753726::1::::<><>::
-IMG_0030.jpeg::CompressedTexture2D::5320032270526475161::1739750811::1739753726::1::::<><>::
-label.gd::GDScript::-1::1739747740::0::1::::<>Label<>::
-left1.png::CompressedTexture2D::200015411080959611::1739750811::1739753726::1::::<><>::
-left2.png::CompressedTexture2D::2665514039829170713::1739750811::1739753726::1::::<><>::
-Menu.tscn::PackedScene::6057801315788614179::1739763113::0::1::::<><>::res://scripts/menu.gd<>uid://4eptr8hlrm26::::res://assets/background.png<>uid://cjrenn2fwfsdg::::res://fonts/PixelOperator8.ttf<>uid://dvq8xk0emje12::::res://fonts/Menu.tres
-player.tscn::PackedScene::7390496158287426833::1739750811::0::1::::<><>::res://bunny script.gd<>uid://c8d6seps56f6f::::res://cry1.png<>uid://b175jw0pyktab::::res://cry2.png<>uid://c7avi2w75tikk::::res://down1.png<>uid://b32jjs3v2usxi::::res://down2.png<>uid://sdmokwrpp1e7::::res://happy1.png<>uid://b4bueqovorgqy::::res://happy2.png<>uid://c35hvvuigkr8::::res://left1.png<>uid://bd8gvkty0tgtt::::res://left2.png<>uid://hjmwo8ulrhb5::::res://right1.png<>uid://bn6p5gh2ullgw::::res://right2.png<>uid://cgshn6uunh18s::::res://up1.png<>uid://3027nx1fjjat::::res://up2.png
-player_2d.gd::GDScript::-1::1739750811::0::1::::<>CharacterBody2D<>::
 README.md::TextFile::-1::1739747740::0::1::::<><>::
-right1.png::CompressedTexture2D::510669983861402196::1739750811::1739753726::1::::<><>::
-right2.png::CompressedTexture2D::3363836017279679174::1739750811::1739753726::1::::<><>::
-scene.tscn::PackedScene::7452704627361391656::1739750811::0::1::::<><>::uid://2wwh6kk30d0h::::res://grass.jpeg<>uid://ddkanldw6kbj2::::res://player.tscn<>uid://bfe2xfhul5m7d::::res://carrot.tscn
-score.tscn::PackedScene::368179331760225744::1739747740::0::1::::<><>::res://label.gd
-up1.png::CompressedTexture2D::5231583123103931236::1739750811::1739753726::1::::<><>::
-up2.png::CompressedTexture2D::2018594289448472655::1739750811::1739753726::1::::<><>::
-wolf.gd::GDScript::-1::1739750811::0::1::::<>CharacterBody2D<>::
-wolfleft1.png::CompressedTexture2D::3881737116763497684::1739750811::1739753726::1::::<><>::
-wolfleft2.png::CompressedTexture2D::1859785509088737280::1739750811::1739753726::1::::<><>::
-wolfright1.png::CompressedTexture2D::1484751716840793245::1739750811::1739753726::1::::<><>::
-wolfright2.png::CompressedTexture2D::8580329442212459789::1739750811::1739753726::1::::<><>::
-::res://assets/::1739753852
+::res://assets/::1739818015
 background.png::CompressedTexture2D::2044679605703797053::1739753849::1739753852::1::::<><>::
+carrot.png::CompressedTexture2D::7796024828715160290::1739750811::1739817892::1::::<><>::
+cry1.png::CompressedTexture2D::7097180945894118415::1739750811::1739817903::1::::<><>::
+cry2.png::CompressedTexture2D::4279229483187825853::1739750811::1739817903::1::::<><>::
+down1.png::CompressedTexture2D::7020175160613504374::1739750811::1739817907::1::::<><>::
+down2.png::CompressedTexture2D::4408010019663522894::1739750811::1739817907::1::::<><>::
+grass.jpeg::CompressedTexture2D::1941865007379043117::1739750811::1739817951::1::::<><>::
+happy1.png::CompressedTexture2D::1270346483786893976::1739750811::1739817958::1::::<><>::
+happy2.png::CompressedTexture2D::4425183872955441240::1739750811::1739817958::1::::<><>::
+icon.svg::CompressedTexture2D::1480724717128621171::1739747740::1739817963::1::::<><>::
+IMG_0030.jpeg::CompressedTexture2D::5320032270526475161::1739750811::1739817963::1::::<><>::
+left1.png::CompressedTexture2D::200015411080959611::1739750811::1739817974::1::::<><>::
+left2.png::CompressedTexture2D::2665514039829170713::1739750811::1739817974::1::::<><>::
+right1.png::CompressedTexture2D::510669983861402196::1739750811::1739817996::1::::<><>::
+right2.png::CompressedTexture2D::3363836017279679174::1739750811::1739817996::1::::<><>::
+Title.png::CompressedTexture2D::4787549141977946164::1739816030::1739816042::1::::<><>::
+up1.png::CompressedTexture2D::5231583123103931236::1739750811::1739818005::1::::<><>::
+up2.png::CompressedTexture2D::2018594289448472655::1739750811::1739818005::1::::<><>::
+wolfleft1.png::CompressedTexture2D::3881737116763497684::1739750811::1739818015::1::::<><>::
+wolfleft2.png::CompressedTexture2D::1859785509088737280::1739750811::1739818015::1::::<><>::
+wolfright1.png::CompressedTexture2D::1484751716840793245::1739750811::1739818015::1::::<><>::
+wolfright2.png::CompressedTexture2D::8580329442212459789::1739750811::1739818015::1::::<><>::
 zeo254-completed-commission.png::CompressedTexture2D::4840699348739207478::1739747740::1739753726::1::::<><>::
 ::res://assets/brackeys_platformer_assets/::1739747740
 LICENSE & CREDITS.txt::TextFile::-1::1739747740::0::1::::<><>::
@@ -161,5 +143,25 @@ Soldier.png::CompressedTexture2D::58727214580198517::1739747740::1739753726::1::
 ::res://fonts/::1739753725
 Menu.tres::StyleBoxFlat::8668303109615794407::1739747740::0::1::::<><>::
 PixelOperator8.ttf::FontFile::5439902190009404316::1739747740::1739753725::1::::<><>::
-::res://scripts/::1739753974
-menu.gd::GDScript::-1::1739753974::0::1::::<>Control<>::
+::res://scenes/::1739821449
+animations.tscn::PackedScene::8121136444621561836::1739818015::0::1::::<><>::uid://2wwh6kk30d0h::::res://assets/grass.jpeg<>res://scripts/bunny script.gd<>uid://c8d6seps56f6f::::res://assets/cry1.png<>uid://b175jw0pyktab::::res://assets/cry2.png<>uid://c7avi2w75tikk::::res://assets/down1.png<>uid://b32jjs3v2usxi::::res://assets/down2.png<>uid://sdmokwrpp1e7::::res://assets/happy1.png<>uid://b4bueqovorgqy::::res://assets/happy2.png<>uid://c35hvvuigkr8::::res://assets/left1.png<>uid://bd8gvkty0tgtt::::res://assets/left2.png<>uid://hjmwo8ulrhb5::::res://assets/right1.png<>uid://bn6p5gh2ullgw::::res://assets/right2.png<>uid://cgshn6uunh18s::::res://assets/up1.png<>uid://3027nx1fjjat::::res://assets/up2.png<>uid://bvklv4ryhbkhg::::res://assets/wolfleft1.png<>uid://1q5nplk0idbc::::res://assets/wolfleft2.png<>uid://vfhv5j63uap6::::res://assets/wolfright1.png<>uid://duim1i16s1nw4::::res://assets/wolfright2.png
+bunny animation.tscn::PackedScene::2098860689905552883::1739818015::0::1::::<><>::uid://hjmwo8ulrhb5::::res://assets/right1.png<>uid://2wwh6kk30d0h::::res://assets/grass.jpeg<>res://scripts/bunny script.gd<>uid://c8d6seps56f6f::::res://assets/cry1.png<>uid://bn6p5gh2ullgw::::res://assets/right2.png<>uid://c7avi2w75tikk::::res://assets/down1.png<>uid://c35hvvuigkr8::::res://assets/left1.png<>uid://b175jw0pyktab::::res://assets/cry2.png<>uid://bd8gvkty0tgtt::::res://assets/left2.png<>uid://b32jjs3v2usxi::::res://assets/down2.png<>uid://sdmokwrpp1e7::::res://assets/happy1.png<>uid://b4bueqovorgqy::::res://assets/happy2.png<>uid://cgshn6uunh18s::::res://assets/up1.png<>uid://3027nx1fjjat::::res://assets/up2.png<>uid://bvklv4ryhbkhg::::res://assets/wolfleft1.png<>uid://1q5nplk0idbc::::res://assets/wolfleft2.png<>uid://vfhv5j63uap6::::res://assets/wolfright1.png<>uid://duim1i16s1nw4::::res://assets/wolfright2.png
+carrot.tscn::PackedScene::6530268558626117487::1739821401::0::1::::<><>::res://scripts/carrot.gd<>uid://djcpni0icc88m::::res://assets/carrot.png
+enemy.tscn::PackedScene::3283499467380858608::1739821401::0::1::::<><>::res://scripts/enemy.gd<>uid://bvklv4ryhbkhg::::res://assets/wolfleft1.png<>uid://1q5nplk0idbc::::res://assets/wolfleft2.png<>uid://vfhv5j63uap6::::res://assets/wolfright1.png<>uid://duim1i16s1nw4::::res://assets/wolfright2.png
+fst.tscn::PackedScene::7938255816213497335::1739821449::0::1::::<><>::res://scripts/fst.gd<>uid://bm1s0yrtrikvo::::res://scenes/enemy.tscn<>uid://c0bktl38jku2j::::res://scenes/carrot.tscn<>res://scripts/character_body_2d.gd<>uid://c7avi2w75tikk::::res://assets/down1.png<>uid://b32jjs3v2usxi::::res://assets/down2.png<>uid://sdmokwrpp1e7::::res://assets/happy1.png<>uid://b4bueqovorgqy::::res://assets/happy2.png<>uid://c35hvvuigkr8::::res://assets/left1.png<>uid://bd8gvkty0tgtt::::res://assets/left2.png<>uid://hjmwo8ulrhb5::::res://assets/right1.png<>uid://bn6p5gh2ullgw::::res://assets/right2.png<>uid://c8d6seps56f6f::::res://assets/cry1.png<>uid://b175jw0pyktab::::res://assets/cry2.png<>uid://cgshn6uunh18s::::res://assets/up1.png<>uid://3027nx1fjjat::::res://assets/up2.png<>uid://fil4h6w6ng4g::::res://scenes/score.tscn<>uid://ca74u1mja21kc::::res://assets/zeo254-completed-commission.png
+game(old).tscn::PackedScene::9035573388351038258::1739821401::0::1::::<><>::uid://ca74u1mja21kc::::res://assets/zeo254-completed-commission.png
+Menu.tscn::PackedScene::6057801315788614179::1739821401::0::1::::<><>::res://scripts/menu.gd<>uid://4eptr8hlrm26::::res://assets/background.png<>uid://cjrenn2fwfsdg::::res://fonts/PixelOperator8.ttf<>uid://dvq8xk0emje12::::res://fonts/Menu.tres<>uid://caheh8sptyww7::::res://assets/Title.png
+player.tscn::PackedScene::7390496158287426833::1739818004::0::1::::<><>::res://scripts/bunny script.gd<>uid://c8d6seps56f6f::::res://assets/cry1.png<>uid://b175jw0pyktab::::res://assets/cry2.png<>uid://c7avi2w75tikk::::res://assets/down1.png<>uid://b32jjs3v2usxi::::res://assets/down2.png<>uid://sdmokwrpp1e7::::res://assets/happy1.png<>uid://b4bueqovorgqy::::res://assets/happy2.png<>uid://c35hvvuigkr8::::res://assets/left1.png<>uid://bd8gvkty0tgtt::::res://assets/left2.png<>uid://hjmwo8ulrhb5::::res://assets/right1.png<>uid://bn6p5gh2ullgw::::res://assets/right2.png<>uid://cgshn6uunh18s::::res://assets/up1.png<>uid://3027nx1fjjat::::res://assets/up2.png
+scene.tscn::PackedScene::7452704627361391656::1739817984::0::1::::<><>::uid://2wwh6kk30d0h::::res://assets/grass.jpeg<>uid://ddkanldw6kbj2::::res://scenes/player.tscn<>res://carrot.tscn
+score.tscn::PackedScene::368179331760225744::1739821401::0::1::::<><>::res://scripts/label.gd<>uid://cjrenn2fwfsdg::::res://fonts/PixelOperator8.ttf
+::res://scripts/::1739820871
+bunny script.gd::GDScript::-1::1739750811::0::1::::<>CharacterBody2D<>::
+carrot.gd::GDScript::-1::1739753626::0::1::::<>StaticBody2D<>::
+character_body_2d.gd::GDScript::-1::1739818922::0::1::::<>CharacterBody2D<>::
+character_body_2d_2.gd::GDScript::-1::1739750811::0::1::::<>CharacterBody2D<>::
+enemy.gd::GDScript::-1::1739818519::0::1::::<>CharacterBody2D<>::
+fst.gd::GDScript::-1::1739750811::0::1::::<>Node2D<>::
+label.gd::GDScript::-1::1739820871::0::1::::<>Label<>::
+menu.gd::GDScript::-1::1739818100::0::1::::<>Control<>::
+player_2d.gd::GDScript::-1::1739750811::0::1::::<>CharacterBody2D<>::
+wolf.gd::GDScript::-1::1739750811::0::1::::<>CharacterBody2D<>::

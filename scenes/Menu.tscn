@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=3 uid="uid://cskpdqvgmwj5t"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_igj4t"]
+[ext_resource type="Texture2D" uid="uid://4eptr8hlrm26" path="res://assets/background.png" id="2_ylkhm"]
+[ext_resource type="FontFile" uid="uid://cjrenn2fwfsdg" path="res://fonts/PixelOperator8.ttf" id="3_41bnv"]
+[ext_resource type="StyleBox" uid="uid://dvq8xk0emje12" path="res://fonts/Menu.tres" id="4_428pn"]
+[ext_resource type="Texture2D" uid="uid://caheh8sptyww7" path="res://assets/Title.png" id="5_ojded"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_igj4t")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_ylkhm")
+
+[node name="StartButton" type="Button" parent="."]
+custom_minimum_size = Vector2(-0.52, 0)
+layout_mode = 2
+offset_left = 378.0
+offset_top = 374.0
+offset_right = 755.0
+offset_bottom = 426.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_constants/outline_size = 7
+theme_override_constants/h_separation = 2
+theme_override_constants/icon_max_width = -25
+theme_override_constants/align_to_largest_stylebox = 68
+theme_override_fonts/font = ExtResource("3_41bnv")
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = ExtResource("4_428pn")
+text = "Start"
+text_overrun_behavior = 1
+
+[node name="OptionButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 377.0
+offset_top = 466.0
+offset_right = 754.0
+offset_bottom = 489.0
+theme_override_constants/outline_size = 7
+theme_override_constants/h_separation = 1
+theme_override_fonts/font = ExtResource("3_41bnv")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_428pn")
+text = "Options"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 377.0
+offset_top = 545.0
+offset_right = 754.0
+offset_bottom = 584.0
+size_flags_vertical = 4
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_41bnv")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_428pn")
+text = "Quit"
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 239.0
+offset_top = -4.0
+offset_right = 888.0
+offset_bottom = 352.0
+texture = ExtResource("5_ojded")
+expand_mode = 1
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="OptionButton" to="." method="_on_option_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
