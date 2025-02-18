@@ -9,4 +9,4 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	label.text = "score: " + str(score ** 2)
+	label.text = "score: " + str(score)

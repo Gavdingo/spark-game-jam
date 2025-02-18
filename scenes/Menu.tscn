@@ -1,10 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://cskpdqvgmwj5t"]
+[gd_scene load_steps=8 format=3 uid="uid://cskpdqvgmwj5t"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_igj4t"]
 [ext_resource type="Texture2D" uid="uid://4eptr8hlrm26" path="res://assets/background.png" id="2_ylkhm"]
 [ext_resource type="FontFile" uid="uid://cjrenn2fwfsdg" path="res://fonts/PixelOperator8.ttf" id="3_41bnv"]
 [ext_resource type="StyleBox" uid="uid://dvq8xk0emje12" path="res://fonts/Menu.tres" id="4_428pn"]
 [ext_resource type="Texture2D" uid="uid://caheh8sptyww7" path="res://assets/Title.png" id="5_ojded"]
+[ext_resource type="Script" path="res://scenes/label_2.gd" id="6_2avd5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f4umu"]
+font = ExtResource("3_41bnv")
+font_size = 24
+font_color = Color(1, 1, 0.537255, 1)
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -42,11 +50,12 @@ text = "Start"
 text_overrun_behavior = 1
 
 [node name="OptionButton" type="Button" parent="."]
+visible = false
 layout_mode = 2
-offset_left = 377.0
-offset_top = 466.0
-offset_right = 754.0
-offset_bottom = 489.0
+offset_left = -250.0
+offset_top = 715.0
+offset_right = 127.0
+offset_bottom = 754.0
 theme_override_constants/outline_size = 7
 theme_override_constants/h_separation = 1
 theme_override_fonts/font = ExtResource("3_41bnv")
@@ -56,10 +65,10 @@ text = "Options"
 
 [node name="QuitButton" type="Button" parent="."]
 layout_mode = 2
-offset_left = 377.0
-offset_top = 545.0
-offset_right = 754.0
-offset_bottom = 584.0
+offset_left = 379.0
+offset_top = 469.0
+offset_right = 756.0
+offset_bottom = 508.0
 size_flags_vertical = 4
 theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("3_41bnv")
@@ -75,6 +84,17 @@ offset_right = 888.0
 offset_bottom = 352.0
 texture = ExtResource("5_ojded")
 expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 610.0
+offset_right = 683.0
+offset_bottom = 634.0
+text = "high Score: 0"
+label_settings = SubResource("LabelSettings_f4umu")
+uppercase = true
+script = ExtResource("6_2avd5")
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="OptionButton" to="." method="_on_option_button_pressed"]

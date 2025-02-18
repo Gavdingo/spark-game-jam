@@ -1,64 +1,79 @@
 extends CharacterBody2D
 
-
-const SPEED = 300.0
+const NORMAL_SPEED = 350.0
+const SPRINT_SPEED = 700.0
 
 @export var health = 100
 @export var happy_timeout = 0
+@onready var animated_sprite = $AnimatedSprite2D
 
-@onready var _animated_sprite = $AnimatedSprite2D
+var local_t = 0
+var boost_full_t = 0
 
 func _process(delta: float) -> void:
+	local_t += delta
 	happy_timeout -= 1
 
 func _physics_process(delta: float) -> void:
-	# Get the input direction for both axes and handle the movement/deceleration.
-	var direction_x := Input.get_axis("ui_left", "ui_right")
-	var direction_y := Input.get_axis("ui_up", "ui_down")
+	var direction_x = Input.get_axis("ui_left", "ui_right")
+	var direction_y = Input.get_axis("ui_up", "ui_down")
 	
-	if Input.is_action_pressed('ui_right'):
-		_animated_sprite.play('right')
+	var current_speed = NORMAL_SPEED
+
+	var boost_bar = get_node("Node2D/BoostBar")
+
+	if Input.is_key_pressed(KEY_B) and boost_bar.value > 100:
+		current_speed = SPRINT_SPEED
+		$CollisionShape2D.disabled = true  # ghost
+		boost_bar.value -= 100
+	else:
+		$CollisionShape2D.disabled = false
+		boost_bar.value += 30
 		
-	if Input.is_action_pressed('ui_left'):
-		_animated_sprite.play('left')
+	if boost_bar.value == 10000:
+		boost_full_t += 1 * delta
+	else:
+		boost_full_t = 0
+	
+	if boost_full_t >= 10:
+		$Label2.visible = true
+	else: 
+		$Label2.visible = false
+
+	
+	var movement = Vector2(direction_x, direction_y)
+	if movement.length() > 0:
+		movement = movement.normalized()
 		
-	if Input.is_action_pressed('ui_up'):
-		_animated_sprite.play('up')
-		
-	if Input.is_action_pressed('ui_down'):
-		_animated_sprite.play('down')
+	if movement.x > 0:
+		animated_sprite.play('right')
+	elif movement.x < 0:
+		animated_sprite.play('left')
+	elif movement.y < 0:
+		animated_sprite.play('up')
+	elif movement.y > 0:
+		animated_sprite.play('down')
 		
 	if happy_timeout > 0:
-		_animated_sprite.play('happy')
+		animated_sprite.play('happy')
 	
-	# Apply the movement direction for x and y.
-	if direction_x:
-		velocity.x = direction_x * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
-	if direction_y:
-		velocity.y = direction_y * SPEED
-	else:
-		velocity.y = move_toward(velocity.y, 0, SPEED)
-
+	
+	velocity = movement * current_speed
 	move_and_slide()
+	
+	health = min(100, health + 2 * delta)  # health regen
 	
 	var collision_count = get_slide_collision_count()
 	for i in range(collision_count):
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
-
 		if collider.scene_file_path.contains("enemy"):
-			health -= 0.2
-			_animated_sprite.play('sad')
-		
+			health -= 20 * delta
+			animated_sprite.play('sad')
+	
 	var health_bar = get_node("Node2D/HealthBar")
 	health_bar.value = health
 	
-	if health <= 0:
+	if health <= 0 or Input.is_key_pressed(KEY_Q):
+		get_tree().set_meta("score", max(get_node('Score/Label').score, get_tree().get_meta("score", 0)))
 		get_tree().change_scene_to_file("res://scenes/Menu.tscn")
-	
-	
-
-	

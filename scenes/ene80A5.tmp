@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://bm1s0yrtrikvo"]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_8mvsr"]
+[ext_resource type="Texture2D" uid="uid://bvklv4ryhbkhg" path="res://assets/wolfleft1.png" id="2_rkwpu"]
+[ext_resource type="Texture2D" uid="uid://1q5nplk0idbc" path="res://assets/wolfleft2.png" id="3_f7qca"]
+[ext_resource type="Texture2D" uid="uid://vfhv5j63uap6" path="res://assets/wolfright1.png" id="4_abc4s"]
+[ext_resource type="Texture2D" uid="uid://duim1i16s1nw4" path="res://assets/wolfright2.png" id="5_cwd2o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5uihq"]
+size = Vector2(56.0748, 20.0935)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lq66n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rkwpu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_f7qca")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_abc4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cwd2o")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}]
+
+[node name="Enemy" type="CharacterBody2D"]
+z_index = 1
+collision_mask = 2
+script = ExtResource("1_8mvsr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -0.875)
+scale = Vector2(2.675, 2.675)
+shape = SubResource("RectangleShape2D_5uihq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.53, 0.53)
+sprite_frames = SubResource("SpriteFrames_lq66n")
+animation = &"right"

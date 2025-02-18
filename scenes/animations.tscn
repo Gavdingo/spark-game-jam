@@ -19,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://vfhv5j63uap6" path="res://assets/wolfright1.png" id="17_e5tek"]
 [ext_resource type="Texture2D" uid="uid://duim1i16s1nw4" path="res://assets/wolfright2.png" id="18_psujn"]
 
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_xaa2y"]
 animations = [{
 "frames": [{
